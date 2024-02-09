@@ -3,7 +3,7 @@ import csv
 
 radioTitle = "リコラジ"
 workTitle = "lycoreco"
-i = 0
+
 my_Table = [["title","delivery_date","streaming_url","poster_image_url"]]
 
 with open("{}.json".format(workTitle)) as f:
