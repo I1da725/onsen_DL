@@ -15,5 +15,6 @@ for num in D_json["contents"]:
 #print(my_Table)
 
 with open("{}.csv".format(workTitle), 'w') as f:
-    writer = csv.writer(f, delimiter='\t')
+    # writer = csv.writer(f, delimiter='\t')
+    writer = csv.writer(f, delimiter=',')
     writer.writerows(my_Table)
