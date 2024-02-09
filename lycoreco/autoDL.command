@@ -1,5 +1,5 @@
 #!/bin/zsh
-
+# 本ファイルの実行方法 $./autoDL.command lycoreco.csv
 # CSVファイル名を引数として受け取る
 csv_file=$1
 
