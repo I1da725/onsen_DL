@@ -4,13 +4,15 @@ import csv
 import os
 import ffmpeg
 
+#============変更部================
 radioPara = "lycoris-recoil"
 radioTitle = "リコラジ"
 workTitle = "lycoreco"
-tail = ".ts"
-falder = "./output/"
-my_Table = [["title","delivery_date","streaming_url","poster_image_url"]]
+#=================================
 
+my_Table = [["title","delivery_date","streaming_url","poster_image_url"]]
+falder = "./output/"
+tail = ".ts"
 url = "https://www.onsen.ag/web_api/programs/{}".format(radioPara) #APIエンドポイントのURL
 
 # APIからデータを取得
