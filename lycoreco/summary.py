@@ -44,3 +44,5 @@ with open("{}.csv".format(workTitle), 'w') as f:
 #これ以降はautoDL.commandを実行
 #ファイルの実行方法 $./autoDL.command lycoreco.csv
 #CSVファイル名を引数として受け取る
+    
+os.system("./autoDL.command {}.csv".format(workTitle))
