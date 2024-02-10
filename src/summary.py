@@ -10,6 +10,9 @@ import re
 radioPara = "lycoris-recoil"
 radioTitle = "リコラジ"
 workTitle = "lycoreco"
+artist = "古賀葵,山根綺"
+album_artist = "古賀葵,山根綺"
+album = "16bit_radio"
 CK = {"_session_id" : ""}
 #=================================
 
@@ -74,3 +77,5 @@ os.system("./autoDL.command {}.csv".format(workTitle))
 #ファイルの実行方法 $./autoChange.command ./output_ts/****.ts ./output_m4a/****.m4a
 for ts, hoge1, hoge2, hoge3, m4a in my_Table[1:]:
     os.system("./autoChange.command {} {}".format(ts,m4a))
+
+#m4aファイルのメタデータ適用
