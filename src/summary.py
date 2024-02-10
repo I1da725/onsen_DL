@@ -5,10 +5,12 @@ import os
 import ffmpeg
 import re
 
+#_session_id はpremiumでログインしたブラウザのクッキーから取得
 #============変更部================
 radioPara = "lycoris-recoil"
 radioTitle = "リコラジ"
 workTitle = "lycoreco"
+CK = {"_session_id" : ""}
 #=================================
 
 my_Table = [["title","delivery_date","streaming_url","poster_image_url", "output_m4a"]]
@@ -16,10 +18,11 @@ tsfalder = "./output_ts/"
 m4afalder = "./output_m4a/"
 tstail = ".ts"
 m4atail = ".m4a"
-url = "https://www.onsen.ag/web_api/programs/{}".format(radioPara) #APIエンドポイントのURL
+#APIエンドポイントのURL
+url = "https://www.onsen.ag/web_api/programs/{}".format(radioPara) 
 
 # APIからデータを取得
-response = requests.get(url)
+response = requests.get(url, cookies = CK)
 
 # JSON形式で取得データを保存
 with open("{}.json".format(workTitle), "w") as f:
